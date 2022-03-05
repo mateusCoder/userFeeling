@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class userFeelingApplication {
+
+	public static void main(String[] args) {
+		
+		Scanner read = new Scanner(System.in);
+		
+		System.out.println("+------- MEDIDOR DE SENTIMENTO COMPASS -------+ \n");
+		System.out.println("Digite quantos filmes você deseja filtrar: ");
+		String text = (read.next());
+
+		
+		String texto = ":-):-(bolinha";
+
+		Pattern rostoFeliz = Pattern.compile(":-\\)");  
+		Pattern rostoTriste = Pattern.compile(":-\\("); 
+		Matcher feliz = rostoFeliz.matcher(texto);  
+		Matcher triste = rostoTriste.matcher(texto);  
+				
+		int contadorFeliz = 0;
+		while(feliz.find()){
+		     contadorFeliz++;		
+		}
+		
+		int contadorTriste = 0;
+		while(triste.find()){
+		     contadorTriste++;		
+		}
+		
+		System.out.println(contadorTriste);
+		System.out.println(contadorFeliz);
+	}
+
+}
