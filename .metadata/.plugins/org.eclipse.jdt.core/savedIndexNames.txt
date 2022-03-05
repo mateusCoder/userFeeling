@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\workspace\Compass\sprint02\ws-userFeeling\.metadata\.plugins\org.eclipse.jdt.core
+2999396786.index
+4182086058.index
